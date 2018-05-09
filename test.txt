@@ -1,0 +1,5 @@
+1	three dogs are running across the grass near to a blue industrial building.	three dogs are running
+0   my country is USA. USA is a great country
+1   my country is USA. I stay in United State of America
+1   i was a master's student. I have graduated from Stanford
+0   i like coffee. i drink tea

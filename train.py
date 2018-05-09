@@ -13,6 +13,7 @@ from siamese_network_semantic import SiameseLSTMw2v
 from tensorflow.contrib import learn
 import gzip
 from random import random
+
 # Parameters
 # ==================================================
 

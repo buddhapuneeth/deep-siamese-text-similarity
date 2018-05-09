@@ -1,0 +1,5 @@
+python train.py --is_char_based False --word2vec_model wiki.simple.vec --word2vec_format bin/text/textgz --training_files train_snli.txt --num_epochs 5
+
+
+
+python eval.py --model /home/buddha/DEV/DeepSiamese/deep-siamese-text-similarity/runs/1525765670/checkpoints/model-77000 --eval_filepath test.txt --vocab_filepath /home/buddha/DEV/DeepSiamese/deep-siamese-text-similarity/runs/1525765670/checkpoints/vocab

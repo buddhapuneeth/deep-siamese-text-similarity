@@ -6,7 +6,7 @@ import numpy as np
 import time
 import gc
 from tensorflow.contrib import learn
-from gensim.models.word2vec import Word2Vec
+from gensim.models import KeyedVectors as Word2Vec
 import gzip
 from random import random
 from preprocess import MyVocabularyProcessor
@@ -37,14 +37,14 @@ class InputHelper(object):
         num_keys = 0
         if type=="textgz":
             # this seems faster than gensim non-binary load
-            for line in gzip.open(emb_path):
+            for line in gzip.open(emb_path, 'rb'):
                 l = line.strip().split()
                 st=l[0].lower()
                 self.pre_emb[st]=np.asarray(l[1:])
             num_keys=len(self.pre_emb)
         if type=="text":
             # this seems faster than gensim non-binary load
-            for line in open(emb_path):
+            for line in open(emb_path , 'rb'):
                 l = line.strip().split()
                 st=l[0].lower()
                 self.pre_emb[st]=np.asarray(l[1:])
